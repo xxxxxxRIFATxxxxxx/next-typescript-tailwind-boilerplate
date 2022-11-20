@@ -1,9 +1,14 @@
-import styles from "../styles/Home.module.css";
+import Meta from "../components/Meta/Meta";
 
 export default function Home() {
     return (
-        <div className={`${styles.homeContainer}`}>
-            <h1>Hello World</h1>
-        </div>
+        <>
+            <Meta
+                title=""
+                keywords=""
+                description=""
+            />
+            <h1>Home Page</h1>
+        </>
     );
 }

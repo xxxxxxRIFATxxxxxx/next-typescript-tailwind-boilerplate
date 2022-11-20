@@ -2,18 +2,17 @@ import { ReactNode } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 
-interface Props {
+interface LayoutProps {
     children?: ReactNode;
-    styleClass?: string;
-}
+};
 
-const Layout = ({ children, styleClass, ...props }: Props) => {
+const Layout = ({ children }: LayoutProps) => {
     return (
-        <div className={`${styleClass}`} {...props}>
+        <>
             <Header />
-                {children}
+            {children}
             <Footer />
-        </div>
+        </>
     );
 };
 

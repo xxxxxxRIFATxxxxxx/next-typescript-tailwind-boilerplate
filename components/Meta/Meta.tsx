@@ -1,13 +1,13 @@
-import Head from 'next/head';
-import React from 'react';
+import Head from "next/head";
+import React from "react";
 
-interface Props {
+interface MetaProps {
     title?: string;
     keywords?: string;
     description?: string;
 };
 
-const Meta = ({ title, keywords, description }: Props) => {
+const Meta = ({ title = "", keywords = "", description = "" }: MetaProps) => {
     return (
         <Head>
             <title>
@@ -20,14 +20,11 @@ const Meta = ({ title, keywords, description }: Props) => {
             <meta name="description" content={description} />
             <meta name="keywords" content={keywords} />
             <link rel="icon" href="/favicon.ico" />
+
+            {/* Font Awesome */}
+            <script src="https://kit.fontawesome.com/96239c21a7.js" crossOrigin="anonymous"></script>
         </Head>
     );
-};
-
-Meta.defaultProps = {
-    title: "",
-    keywords: "",
-    description: ""
 };
 
 export default Meta;
